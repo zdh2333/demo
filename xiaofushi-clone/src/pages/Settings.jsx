@@ -1,9 +1,44 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Settings.css';
 
+function getInitialTheme() {
+  const saved = localStorage.getItem('redo-theme');
+  if (saved) return saved;
+  return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
 export default function Settings() {
-  const [language, setLanguage] = useState('zh');
-  const [theme, setTheme] = useState('light');
+  const [language, setLanguage] = useState(() => localStorage.getItem('redo-lang') || 'zh');
+  const [theme, setTheme] = useState(getInitialTheme);
+  const [langToast, setLangToast] = useState(false);
+
+  useEffect(() => {
+    const resolved = theme === 'auto'
+      ? (window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+      : theme;
+    document.documentElement.setAttribute('data-theme', resolved);
+    localStorage.setItem('redo-theme', theme);
+  }, [theme]);
+
+  useEffect(() => {
+    if (theme !== 'auto') return;
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    function handler(e) {
+      document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+    }
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, [theme]);
+
+  function handleLanguageChange(e) {
+    const val = e.target.value;
+    setLanguage(val);
+    localStorage.setItem('redo-lang', val);
+    if (val !== 'zh') {
+      setLangToast(true);
+      setTimeout(() => setLangToast(false), 3000);
+    }
+  }
 
   return (
     <div className="settings">
@@ -18,7 +53,7 @@ export default function Settings() {
           <select
             className="setting-select"
             value={language}
-            onChange={(e) => setLanguage(e.target.value)}
+            onChange={handleLanguageChange}
           >
             <option value="zh">中文</option>
             <option value="ja">日本語</option>
@@ -51,6 +86,12 @@ export default function Settings() {
           <p>版本：1.0.0</p>
         </div>
       </div>
+
+      {langToast && (
+        <div className="settings-toast">
+          多语言支持即将上线，当前仅支持中文界面
+        </div>
+      )}
     </div>
   );
 }

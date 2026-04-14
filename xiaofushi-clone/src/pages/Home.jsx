@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid,
   Tooltip, Legend, ResponsiveContainer, AreaChart, Area,
@@ -19,6 +19,10 @@ export default function Home() {
   const [trendData, setTrendData] = useState([]);
   const [comparisonData, setComparisonData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [showDatePicker, setShowDatePicker] = useState(false);
+  const [applicationDate, setApplicationDate] = useState('');
+  const [estimateResult, setEstimateResult] = useState(null);
+  const datePickerRef = useRef(null);
 
   useEffect(() => {
     setLoading(true);
@@ -36,6 +40,28 @@ export default function Home() {
     fetchRegionComparison().then(setComparisonData);
   }, []);
 
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (datePickerRef.current && !datePickerRef.current.contains(e.target)) {
+        setShowDatePicker(false);
+      }
+    }
+    if (showDatePicker) document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showDatePicker]);
+
+  function handleEstimate() {
+    if (!applicationDate || !stats) return;
+    const start = new Date(applicationDate);
+    const avgDays = stats.avgDays || 365;
+    const estimated = new Date(start.getTime() + avgDays * 86400000);
+    const today = new Date();
+    const remaining = Math.max(0, Math.ceil((estimated - today) / 86400000));
+    const regionName = regions.find(r => r.id === selectedRegion)?.name || selectedRegion;
+    setEstimateResult({ regionName, avgDays, estimated, remaining });
+    setShowDatePicker(false);
+  }
+
   return (
     <div className="home">
       <section className="hero">
@@ -43,13 +69,55 @@ export default function Home() {
         <p className="hero-desc">
           基于出入国在留管理庁公开数据，为您预估永住申请审批时间
         </p>
-        <button className="hero-cta">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <line x1="5" y1="12" x2="19" y2="12" />
-          </svg>
-          添加我的日期，获取精确预估
-        </button>
+        <div className="hero-cta-wrapper" ref={datePickerRef}>
+          <button className="hero-cta" onClick={() => setShowDatePicker(!showDatePicker)}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+            添加我的日期，获取精确预估
+          </button>
+          {showDatePicker && (
+            <div className="date-picker-dropdown">
+              <label className="date-picker-label">请选择您的申请提交日期</label>
+              <input
+                type="date"
+                className="date-picker-input"
+                value={applicationDate}
+                onChange={(e) => setApplicationDate(e.target.value)}
+                max={new Date().toISOString().split('T')[0]}
+              />
+              <button
+                className="date-picker-submit"
+                onClick={handleEstimate}
+                disabled={!applicationDate}
+              >
+                计算预估结果
+              </button>
+            </div>
+          )}
+        </div>
+        {estimateResult && (
+          <div className="estimate-result">
+            <div className="estimate-result-inner">
+              <span className="estimate-icon">📅</span>
+              <div className="estimate-text">
+                <p>
+                  基于{estimateResult.regionName}地区平均审批天数
+                  <strong> {estimateResult.avgDays} 天</strong>，
+                  预估审批完成日期为
+                  <strong> {estimateResult.estimated.toLocaleDateString('zh-CN')} </strong>
+                </p>
+                <p className="estimate-remaining">
+                  {estimateResult.remaining > 0
+                    ? `距离预估完成还有约 ${estimateResult.remaining} 天`
+                    : '已超过预估审批周期，请关注入管局通知'}
+                </p>
+              </div>
+              <button className="estimate-close" onClick={() => setEstimateResult(null)}>✕</button>
+            </div>
+          </div>
+        )}
       </section>
 
       <section className="region-selector">
@@ -67,7 +135,14 @@ export default function Home() {
         </div>
       </section>
 
-      {stats && (
+      {loading && (
+        <div className="loading-spinner">
+          <div className="spinner"></div>
+          <p>加载数据中...</p>
+        </div>
+      )}
+
+      {!loading && stats && (
         <section className="stats-grid">
           <StatsCard
             icon="⏱"
@@ -93,7 +168,7 @@ export default function Home() {
         </section>
       )}
 
-      {trendData.length > 0 && (
+      {!loading && trendData.length > 0 && (
         <section className="chart-section">
           <h2 className="section-title">累计申请与处理数据</h2>
           <div className="chart-card">
@@ -112,7 +187,7 @@ export default function Home() {
         </section>
       )}
 
-      {trendData.length > 0 && (
+      {!loading && trendData.length > 0 && (
         <section className="chart-section">
           <h2 className="section-title">每年新增申请数据</h2>
           <div className="chart-card">
