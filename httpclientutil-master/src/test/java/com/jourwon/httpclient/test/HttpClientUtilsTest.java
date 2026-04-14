@@ -52,6 +52,7 @@ public class HttpClientUtilsTest {
 		headers.put("Connection", "keep-alive");
 		headers.put("Accept", "application/json");
 		headers.put("Accept-Language", "zh-CN,zh;q=0.9");
+		headers.put("Accept-Encoding", "gzip, deflate, br");
 		headers.put("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36");
 		HttpClientResult result = HttpClientUtils.doPost("http://127.0.0.1:8080/hello/post", headers, null);
 		System.out.println(result);
