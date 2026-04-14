@@ -54,7 +54,7 @@
   border-radius: 6px;
   font-size: 14px;
   color: var(--text);
-  background: var(--white);
+  background: var(--bg);
   cursor: pointer;
   min-width: 120px;
 }
@@ -68,4 +68,29 @@
   font-size: 14px;
   color: var(--text-secondary);
   margin-bottom: 4px;
+}
+
+.settings-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 1000;
+  animation: toastIn 0.3s ease, toastOut 0.3s ease 2.7s;
+  box-shadow: var(--shadow-lg);
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes toastOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
