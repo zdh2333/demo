@@ -18,7 +18,7 @@ export default function App() {
     <I18nProvider>
       <ThemeProvider>
         <AuthProvider>
-          <BrowserRouter>
+          <BrowserRouter basename={import.meta.env.BASE_URL}>
             <div className="app">
               <Header onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
               <div className={`app-body ${sidebarOpen ? 'with-sidebar' : ''}`}>

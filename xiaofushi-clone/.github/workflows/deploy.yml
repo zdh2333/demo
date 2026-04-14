@@ -33,6 +33,12 @@ jobs:
       - name: Build
         run: npm run build
         working-directory: xiaofushi-clone
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+
+      - name: Copy index.html to 404.html for SPA routing
+        run: cp xiaofushi-clone/dist/index.html xiaofushi-clone/dist/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
