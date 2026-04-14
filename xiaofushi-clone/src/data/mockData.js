@@ -17,7 +17,7 @@ export const regionStats = {
   sapporo: { avgDays: 220, approvalRate: 55.0, pending: 1500 },
   hiroshima: { avgDays: 260, approvalRate: 50.5, pending: 1800 },
   sendai: { avgDays: 230, approvalRate: 53.2, pending: 1200 },
-  yokohama: { avgDays: 350, approvalRate: 42.8, pending: 5500 },
+  takamatsu: { avgDays: 180, approvalRate: 67.7, pending: 89 },
 };
 
 export const accumulatedData = [
@@ -52,7 +52,7 @@ export const monthlyNewData = [
 
 export const processingByRegion = [
   { region: '东京', days: 400 },
-  { region: '横滨', days: 350 },
+  { region: '高松', days: 180 },
   { region: '大阪', days: 320 },
   { region: '名古屋', days: 280 },
   { region: '广岛', days: 260 },

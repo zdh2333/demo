@@ -98,6 +98,43 @@
   box-shadow: var(--shadow);
 }
 
+.chart-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.chart-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.chart-card-subtitle {
+  font-size: 13px;
+  color: var(--primary);
+}
+
+.chart-card-header-right {
+  text-align: right;
+}
+
+.chart-card-metric-label {
+  display: block;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.chart-card-metric-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
 .source-section {
   margin-top: 32px;
   padding: 24px;

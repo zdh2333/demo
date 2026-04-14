@@ -87,10 +87,12 @@ export async function fetchYearlyTrend(regionId) {
   return regionData.map((d) => {
     runningTotal += d.newApps || 0;
     runningProcessed += (d.approved || 0) + (d.rejected || 0) + (d.other || 0);
+    const pending = d.pending || ((d.totalReceived || 0) - (d.totalProcessed || 0));
     return {
       month: d.year,
       total: runningTotal,
       processed: runningProcessed,
+      pending: pending > 0 ? pending : 0,
       newApps: d.newApps || 0,
       approved: d.approved || 0,
       rejected: d.rejected || 0,

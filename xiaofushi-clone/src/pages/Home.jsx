@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid,
-  Tooltip, Legend, ResponsiveContainer, AreaChart, Area,
+  Tooltip, Legend, ResponsiveContainer,
 } from 'recharts';
 import StatsCard from '../components/StatsCard';
 import FAQ from '../components/FAQ';
@@ -95,18 +95,31 @@ export default function Home() {
 
       {trendData.length > 0 && (
         <section className="chart-section">
-          <h2 className="section-title">累计申请与处理数据</h2>
           <div className="chart-card">
+            <div className="chart-card-header">
+              <div className="chart-card-header-left">
+                <h3 className="chart-card-title">
+                  {regions.find((r) => r.id === selectedRegion)?.nameJa || ''}累積データ
+                </h3>
+                <span className="chart-card-subtitle">
+                  {trendData[0]?.month}年から
+                </span>
+              </div>
+              <div className="chart-card-header-right">
+                <span className="chart-card-metric-label">前月総数</span>
+                <span className="chart-card-metric-value">
+                  {trendData[trendData.length - 1]?.pending?.toLocaleString() || '—'}
+                </span>
+              </div>
+            </div>
             <ResponsiveContainer width="100%" height={320}>
-              <AreaChart data={trendData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                <XAxis dataKey="month" tick={{ fontSize: 12 }} />
+              <BarChart data={trendData}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" vertical={false} />
+                <XAxis dataKey="month" tick={{ fontSize: 11 }} interval={Math.max(0, Math.floor(trendData.length / 12) - 1)} />
                 <YAxis tick={{ fontSize: 12 }} />
                 <Tooltip contentStyle={{ borderRadius: 8, border: 'none', boxShadow: '0 2px 12px rgba(0,0,0,0.1)' }} />
-                <Legend />
-                <Area type="monotone" dataKey="total" name="累计申请" stroke="#FF7043" fill="#FF704320" strokeWidth={2} />
-                <Area type="monotone" dataKey="processed" name="累计处理" stroke="#00C853" fill="#00C85320" strokeWidth={2} />
-              </AreaChart>
+                <Bar dataKey="pending" name="待处理积压数" fill="#00C853" radius={[2, 2, 0, 0]} />
+              </BarChart>
             </ResponsiveContainer>
           </div>
         </section>
