@@ -1,0 +1,42 @@
+[
+  {
+    "region": "东京",
+    "days": 670,
+    "approvalRate": 70.1
+  },
+  {
+    "region": "札幌",
+    "days": 275,
+    "approvalRate": 71
+  },
+  {
+    "region": "大阪",
+    "days": 251,
+    "approvalRate": 67.4
+  },
+  {
+    "region": "福冈",
+    "days": 220,
+    "approvalRate": 63
+  },
+  {
+    "region": "仙台",
+    "days": 153,
+    "approvalRate": 66.3
+  },
+  {
+    "region": "名古屋",
+    "days": 91,
+    "approvalRate": 65.4
+  },
+  {
+    "region": "广岛",
+    "days": 88,
+    "approvalRate": 70.2
+  },
+  {
+    "region": "高松",
+    "days": 56,
+    "approvalRate": 67.7
+  }
+]

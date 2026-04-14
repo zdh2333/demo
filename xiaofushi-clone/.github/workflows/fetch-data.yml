@@ -1,0 +1,39 @@
+name: Fetch e-Stat Data
+
+on:
+  schedule:
+    # 每天 UTC 03:00（北京时间 11:00）运行
+    - cron: '0 3 * * *'
+  workflow_dispatch: # 支持手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch data from e-Stat API
+        env:
+          ESTAT_APP_ID: ${{ secrets.ESTAT_APP_ID }}
+        run: node scripts/fetch-estat-data.js
+        working-directory: xiaofushi-clone
+
+      - name: Commit and push if changed
+        working-directory: xiaofushi-clone
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/
+          if git diff --staged --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "chore: update e-Stat data $(date -u +%Y-%m-%d)"
+            git push
+          fi
