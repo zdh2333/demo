@@ -6,7 +6,7 @@ export const regions = [
   { id: 'sapporo', name: '札幌', nameJa: '札幌' },
   { id: 'hiroshima', name: '广岛', nameJa: '広島' },
   { id: 'sendai', name: '仙台', nameJa: '仙台' },
-  { id: 'yokohama', name: '横滨', nameJa: '横浜' },
+  { id: 'takamatsu', name: '高松', nameJa: '高松' },
 ];
 
 export const regionStats = {

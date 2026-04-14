@@ -1,0 +1,1829 @@
+{
+  "50000": {
+    "area": "50000",
+    "areaName": "全国",
+    "data": [
+      {
+        "year": "2006",
+        "totalReceived": 97862,
+        "carryOver": 31491,
+        "newApps": 66371,
+        "totalProcessed": 59722,
+        "approved": 51650,
+        "rejected": 7625,
+        "other": 447,
+        "pending": 38140
+      },
+      {
+        "year": "2007",
+        "totalReceived": 104362,
+        "carryOver": 38140,
+        "newApps": 66222,
+        "totalProcessed": 70520,
+        "approved": 60640,
+        "rejected": 9213,
+        "other": 667,
+        "pending": 33842
+      },
+      {
+        "year": "2008",
+        "totalReceived": 103101,
+        "carryOver": 33842,
+        "newApps": 69259,
+        "totalProcessed": 68562,
+        "approved": 57920,
+        "rejected": 10106,
+        "other": 536,
+        "pending": 34539
+      },
+      {
+        "year": "2009",
+        "totalReceived": 99901,
+        "carryOver": 34539,
+        "newApps": 65362,
+        "totalProcessed": 66156,
+        "approved": 53960,
+        "rejected": 11372,
+        "other": 824,
+        "pending": 33745
+      },
+      {
+        "year": "2010",
+        "totalReceived": 94207,
+        "carryOver": 33745,
+        "newApps": 60462,
+        "totalProcessed": 65169,
+        "approved": 48003,
+        "rejected": 16495,
+        "other": 671,
+        "pending": 29038
+      },
+      {
+        "year": "2011",
+        "totalReceived": 89892,
+        "carryOver": 29038,
+        "newApps": 60854,
+        "totalProcessed": 56969,
+        "approved": 41429,
+        "rejected": 14818,
+        "other": 722,
+        "pending": 32923
+      },
+      {
+        "year": "2012",
+        "totalReceived": 93129,
+        "carryOver": 32923,
+        "newApps": 60206,
+        "totalProcessed": 61173,
+        "approved": 42176,
+        "rejected": 18221,
+        "other": 776,
+        "pending": 31956
+      },
+      {
+        "year": "2013",
+        "totalReceived": 82716,
+        "carryOver": 31956,
+        "newApps": 50760,
+        "totalProcessed": 62965,
+        "approved": 45179,
+        "rejected": 16420,
+        "other": 1366
+      },
+      {
+        "year": "2014",
+        "totalReceived": 74110,
+        "carryOver": 19751,
+        "newApps": 54359,
+        "totalProcessed": 50788,
+        "approved": 35800,
+        "rejected": 13916,
+        "other": 1072
+      },
+      {
+        "year": "2015",
+        "totalReceived": 77298,
+        "carryOver": 23134,
+        "newApps": 54164,
+        "totalProcessed": 56182,
+        "approved": 39820,
+        "rejected": 15130,
+        "other": 1232
+      },
+      {
+        "year": "2016",
+        "totalReceived": 76474,
+        "carryOver": 21115,
+        "newApps": 55359,
+        "totalProcessed": 52819,
+        "approved": 35679,
+        "rejected": 15631,
+        "other": 1509
+      },
+      {
+        "year": "2017",
+        "totalReceived": 83679,
+        "carryOver": 23655,
+        "newApps": 60024,
+        "totalProcessed": 50907,
+        "approved": 28942,
+        "rejected": 20044,
+        "other": 1921
+      },
+      {
+        "year": "2018",
+        "totalReceived": 93456,
+        "carryOver": 32772,
+        "newApps": 60684,
+        "totalProcessed": 61027,
+        "approved": 31526,
+        "rejected": 27287,
+        "other": 2214
+      },
+      {
+        "year": "2019",
+        "totalReceived": 89712,
+        "carryOver": 32429,
+        "newApps": 57283,
+        "totalProcessed": 56902,
+        "approved": 32213,
+        "rejected": 22243,
+        "other": 2446
+      },
+      {
+        "year": "2020",
+        "totalReceived": 82513,
+        "carryOver": 32810,
+        "newApps": 49703,
+        "totalProcessed": 57570,
+        "approved": 29747,
+        "rejected": 25383,
+        "other": 2440
+      },
+      {
+        "year": "2021",
+        "totalReceived": 86602,
+        "carryOver": 24672,
+        "newApps": 61930,
+        "totalProcessed": 64149,
+        "approved": 36691,
+        "rejected": 25451,
+        "other": 2007
+      },
+      {
+        "year": "2022",
+        "totalReceived": 88942,
+        "carryOver": 22453,
+        "newApps": 66489,
+        "totalProcessed": 58927,
+        "approved": 37992,
+        "rejected": 19148,
+        "other": 1787
+      },
+      {
+        "year": "2023",
+        "totalReceived": 99350,
+        "carryOver": 30014,
+        "newApps": 69336,
+        "totalProcessed": 50986,
+        "approved": 33470,
+        "rejected": 15832,
+        "other": 1684
+      },
+      {
+        "year": "2024",
+        "totalReceived": 116919,
+        "carryOver": 48362,
+        "newApps": 68557,
+        "totalProcessed": 55906,
+        "approved": 36766,
+        "rejected": 17282,
+        "other": 1858
+      }
+    ]
+  },
+  "50010": {
+    "area": "50010",
+    "areaName": "札幌",
+    "data": [
+      {
+        "year": "2006",
+        "totalReceived": 507,
+        "carryOver": 142,
+        "newApps": 365,
+        "totalProcessed": 411,
+        "approved": 373,
+        "rejected": 33,
+        "other": 5,
+        "pending": 96
+      },
+      {
+        "year": "2007",
+        "totalReceived": 498,
+        "carryOver": 96,
+        "newApps": 402,
+        "totalProcessed": 383,
+        "approved": 337,
+        "rejected": 34,
+        "other": 12,
+        "pending": 115
+      },
+      {
+        "year": "2008",
+        "totalReceived": 481,
+        "carryOver": 115,
+        "newApps": 366,
+        "totalProcessed": 315,
+        "approved": 266,
+        "rejected": 47,
+        "other": 2,
+        "pending": 166
+      },
+      {
+        "year": "2009",
+        "totalReceived": 533,
+        "carryOver": 166,
+        "newApps": 367,
+        "totalProcessed": 428,
+        "approved": 367,
+        "rejected": 55,
+        "other": 6,
+        "pending": 105
+      },
+      {
+        "year": "2010",
+        "totalReceived": 460,
+        "carryOver": 105,
+        "newApps": 355,
+        "totalProcessed": 361,
+        "approved": 309,
+        "rejected": 45,
+        "other": 7,
+        "pending": 99
+      },
+      {
+        "year": "2011",
+        "totalReceived": 480,
+        "carryOver": 99,
+        "newApps": 381,
+        "totalProcessed": 355,
+        "approved": 297,
+        "rejected": 49,
+        "other": 9,
+        "pending": 125
+      },
+      {
+        "year": "2012",
+        "totalReceived": 476,
+        "carryOver": 125,
+        "newApps": 351,
+        "totalProcessed": 350,
+        "approved": 285,
+        "rejected": 45,
+        "other": 20,
+        "pending": 126
+      },
+      {
+        "year": "2013",
+        "totalReceived": 411,
+        "carryOver": 126,
+        "newApps": 285,
+        "totalProcessed": 313,
+        "approved": 256,
+        "rejected": 41,
+        "other": 16
+      },
+      {
+        "year": "2014",
+        "totalReceived": 413,
+        "carryOver": 98,
+        "newApps": 315,
+        "totalProcessed": 309,
+        "approved": 253,
+        "rejected": 33,
+        "other": 23
+      },
+      {
+        "year": "2015",
+        "totalReceived": 375,
+        "carryOver": 104,
+        "newApps": 271,
+        "totalProcessed": 296,
+        "approved": 268,
+        "rejected": 25,
+        "other": 3
+      },
+      {
+        "year": "2016",
+        "totalReceived": 422,
+        "carryOver": 79,
+        "newApps": 343,
+        "totalProcessed": 333,
+        "approved": 295,
+        "rejected": 37,
+        "other": 1
+      },
+      {
+        "year": "2017",
+        "totalReceived": 446,
+        "carryOver": 89,
+        "newApps": 357,
+        "totalProcessed": 356,
+        "approved": 310,
+        "rejected": 37,
+        "other": 9
+      },
+      {
+        "year": "2018",
+        "totalReceived": 548,
+        "carryOver": 90,
+        "newApps": 458,
+        "totalProcessed": 340,
+        "approved": 283,
+        "rejected": 36,
+        "other": 21
+      },
+      {
+        "year": "2019",
+        "totalReceived": 647,
+        "carryOver": 208,
+        "newApps": 439,
+        "totalProcessed": 486,
+        "approved": 337,
+        "rejected": 121,
+        "other": 28
+      },
+      {
+        "year": "2020",
+        "totalReceived": 566,
+        "carryOver": 161,
+        "newApps": 405,
+        "totalProcessed": 431,
+        "approved": 294,
+        "rejected": 117,
+        "other": 20
+      },
+      {
+        "year": "2021",
+        "totalReceived": 596,
+        "carryOver": 140,
+        "newApps": 456,
+        "totalProcessed": 436,
+        "approved": 312,
+        "rejected": 90,
+        "other": 34
+      },
+      {
+        "year": "2022",
+        "totalReceived": 612,
+        "carryOver": 160,
+        "newApps": 452,
+        "totalProcessed": 457,
+        "approved": 294,
+        "rejected": 149,
+        "other": 14
+      },
+      {
+        "year": "2023",
+        "totalReceived": 603,
+        "carryOver": 155,
+        "newApps": 448,
+        "totalProcessed": 466,
+        "approved": 308,
+        "rejected": 134,
+        "other": 24
+      },
+      {
+        "year": "2024",
+        "totalReceived": 677,
+        "carryOver": 137,
+        "newApps": 540,
+        "totalProcessed": 384,
+        "approved": 260,
+        "rejected": 106,
+        "other": 18
+      }
+    ]
+  },
+  "50090": {
+    "area": "50090",
+    "areaName": "仙台",
+    "data": [
+      {
+        "year": "2006",
+        "totalReceived": 2257,
+        "carryOver": 600,
+        "newApps": 1657,
+        "totalProcessed": 1558,
+        "approved": 1431,
+        "rejected": 110,
+        "other": 17,
+        "pending": 699
+      },
+      {
+        "year": "2007",
+        "totalReceived": 2394,
+        "carryOver": 699,
+        "newApps": 1695,
+        "totalProcessed": 1556,
+        "approved": 1402,
+        "rejected": 128,
+        "other": 26,
+        "pending": 838
+      },
+      {
+        "year": "2008",
+        "totalReceived": 2522,
+        "carryOver": 838,
+        "newApps": 1684,
+        "totalProcessed": 1992,
+        "approved": 1758,
+        "rejected": 226,
+        "other": 8,
+        "pending": 530
+      },
+      {
+        "year": "2009",
+        "totalReceived": 2152,
+        "carryOver": 530,
+        "newApps": 1622,
+        "totalProcessed": 1641,
+        "approved": 1394,
+        "rejected": 228,
+        "other": 19,
+        "pending": 511
+      },
+      {
+        "year": "2010",
+        "totalReceived": 2070,
+        "carryOver": 511,
+        "newApps": 1559,
+        "totalProcessed": 1610,
+        "approved": 1393,
+        "rejected": 199,
+        "other": 18,
+        "pending": 460
+      },
+      {
+        "year": "2011",
+        "totalReceived": 1737,
+        "carryOver": 460,
+        "newApps": 1277,
+        "totalProcessed": 1302,
+        "approved": 1137,
+        "rejected": 146,
+        "other": 19,
+        "pending": 435
+      },
+      {
+        "year": "2012",
+        "totalReceived": 1673,
+        "carryOver": 435,
+        "newApps": 1238,
+        "totalProcessed": 1230,
+        "approved": 1032,
+        "rejected": 174,
+        "other": 24,
+        "pending": 443
+      },
+      {
+        "year": "2013",
+        "totalReceived": 1343,
+        "carryOver": 443,
+        "newApps": 900,
+        "totalProcessed": 1096,
+        "approved": 883,
+        "rejected": 198,
+        "other": 15
+      },
+      {
+        "year": "2014",
+        "totalReceived": 1114,
+        "carryOver": 247,
+        "newApps": 867,
+        "totalProcessed": 850,
+        "approved": 705,
+        "rejected": 122,
+        "other": 23
+      },
+      {
+        "year": "2015",
+        "totalReceived": 913,
+        "carryOver": 264,
+        "newApps": 649,
+        "totalProcessed": 688,
+        "approved": 569,
+        "rejected": 97,
+        "other": 22
+      },
+      {
+        "year": "2016",
+        "totalReceived": 904,
+        "carryOver": 225,
+        "newApps": 679,
+        "totalProcessed": 671,
+        "approved": 518,
+        "rejected": 142,
+        "other": 11
+      },
+      {
+        "year": "2017",
+        "totalReceived": 989,
+        "carryOver": 233,
+        "newApps": 756,
+        "totalProcessed": 725,
+        "approved": 625,
+        "rejected": 76,
+        "other": 24
+      },
+      {
+        "year": "2018",
+        "totalReceived": 1072,
+        "carryOver": 264,
+        "newApps": 808,
+        "totalProcessed": 692,
+        "approved": 554,
+        "rejected": 115,
+        "other": 23
+      },
+      {
+        "year": "2019",
+        "totalReceived": 1053,
+        "carryOver": 380,
+        "newApps": 673,
+        "totalProcessed": 751,
+        "approved": 461,
+        "rejected": 241,
+        "other": 49
+      },
+      {
+        "year": "2020",
+        "totalReceived": 888,
+        "carryOver": 302,
+        "newApps": 586,
+        "totalProcessed": 597,
+        "approved": 346,
+        "rejected": 225,
+        "other": 26
+      },
+      {
+        "year": "2021",
+        "totalReceived": 981,
+        "carryOver": 284,
+        "newApps": 697,
+        "totalProcessed": 703,
+        "approved": 442,
+        "rejected": 238,
+        "other": 23
+      },
+      {
+        "year": "2022",
+        "totalReceived": 949,
+        "carryOver": 278,
+        "newApps": 671,
+        "totalProcessed": 569,
+        "approved": 382,
+        "rejected": 156,
+        "other": 31
+      },
+      {
+        "year": "2023",
+        "totalReceived": 1177,
+        "carryOver": 380,
+        "newApps": 797,
+        "totalProcessed": 917,
+        "approved": 616,
+        "rejected": 278,
+        "other": 23
+      },
+      {
+        "year": "2024",
+        "totalReceived": 1091,
+        "carryOver": 260,
+        "newApps": 831,
+        "totalProcessed": 766,
+        "approved": 486,
+        "rejected": 247,
+        "other": 33
+      }
+    ]
+  },
+  "50170": {
+    "area": "50170",
+    "areaName": "东京",
+    "data": [
+      {
+        "year": "2006",
+        "totalReceived": 48962,
+        "carryOver": 19941,
+        "newApps": 29021,
+        "totalProcessed": 27826,
+        "approved": 23155,
+        "rejected": 4418,
+        "other": 253,
+        "pending": 21136
+      },
+      {
+        "year": "2007",
+        "totalReceived": 52522,
+        "carryOver": 21136,
+        "newApps": 31386,
+        "totalProcessed": 35559,
+        "approved": 30378,
+        "rejected": 4977,
+        "other": 204,
+        "pending": 16963
+      },
+      {
+        "year": "2008",
+        "totalReceived": 51587,
+        "carryOver": 16963,
+        "newApps": 34624,
+        "totalProcessed": 32578,
+        "approved": 27119,
+        "rejected": 5216,
+        "other": 243,
+        "pending": 19009
+      },
+      {
+        "year": "2009",
+        "totalReceived": 55440,
+        "carryOver": 19009,
+        "newApps": 36431,
+        "totalProcessed": 35363,
+        "approved": 28633,
+        "rejected": 6509,
+        "other": 221,
+        "pending": 20077
+      },
+      {
+        "year": "2010",
+        "totalReceived": 53845,
+        "carryOver": 20077,
+        "newApps": 33768,
+        "totalProcessed": 35499,
+        "approved": 24817,
+        "rejected": 10399,
+        "other": 283,
+        "pending": 18346
+      },
+      {
+        "year": "2011",
+        "totalReceived": 52028,
+        "carryOver": 18346,
+        "newApps": 33682,
+        "totalProcessed": 32586,
+        "approved": 23312,
+        "rejected": 8910,
+        "other": 364,
+        "pending": 19442
+      },
+      {
+        "year": "2012",
+        "totalReceived": 53944,
+        "carryOver": 19442,
+        "newApps": 34502,
+        "totalProcessed": 33789,
+        "approved": 22082,
+        "rejected": 11297,
+        "other": 410,
+        "pending": 20155
+      },
+      {
+        "year": "2013",
+        "totalReceived": 49913,
+        "carryOver": 20155,
+        "newApps": 29758,
+        "totalProcessed": 37157,
+        "approved": 25843,
+        "rejected": 10571,
+        "other": 743
+      },
+      {
+        "year": "2014",
+        "totalReceived": 43222,
+        "carryOver": 12756,
+        "newApps": 30466,
+        "totalProcessed": 28531,
+        "approved": 19565,
+        "rejected": 8402,
+        "other": 564
+      },
+      {
+        "year": "2015",
+        "totalReceived": 45584,
+        "carryOver": 14691,
+        "newApps": 30893,
+        "totalProcessed": 33110,
+        "approved": 22211,
+        "rejected": 10239,
+        "other": 660
+      },
+      {
+        "year": "2016",
+        "totalReceived": 44701,
+        "carryOver": 12474,
+        "newApps": 32227,
+        "totalProcessed": 31124,
+        "approved": 19351,
+        "rejected": 10897,
+        "other": 876
+      },
+      {
+        "year": "2017",
+        "totalReceived": 49402,
+        "carryOver": 13577,
+        "newApps": 35825,
+        "totalProcessed": 27321,
+        "approved": 14801,
+        "rejected": 11578,
+        "other": 942
+      },
+      {
+        "year": "2018",
+        "totalReceived": 57901,
+        "carryOver": 22081,
+        "newApps": 35820,
+        "totalProcessed": 34939,
+        "approved": 17464,
+        "rejected": 16373,
+        "other": 1102
+      },
+      {
+        "year": "2019",
+        "totalReceived": 56287,
+        "carryOver": 22962,
+        "newApps": 33325,
+        "totalProcessed": 34453,
+        "approved": 18366,
+        "rejected": 14725,
+        "other": 1362
+      },
+      {
+        "year": "2020",
+        "totalReceived": 49880,
+        "carryOver": 21834,
+        "newApps": 28046,
+        "totalProcessed": 33336,
+        "approved": 16459,
+        "rejected": 15626,
+        "other": 1251
+      },
+      {
+        "year": "2021",
+        "totalReceived": 52723,
+        "carryOver": 16325,
+        "newApps": 36398,
+        "totalProcessed": 38150,
+        "approved": 21863,
+        "rejected": 15331,
+        "other": 956
+      },
+      {
+        "year": "2022",
+        "totalReceived": 54345,
+        "carryOver": 14573,
+        "newApps": 39772,
+        "totalProcessed": 33889,
+        "approved": 23106,
+        "rejected": 9951,
+        "other": 832
+      },
+      {
+        "year": "2023",
+        "totalReceived": 61741,
+        "carryOver": 20456,
+        "newApps": 41285,
+        "totalProcessed": 25014,
+        "approved": 17801,
+        "rejected": 6485,
+        "other": 728
+      },
+      {
+        "year": "2024",
+        "totalReceived": 75578,
+        "carryOver": 36725,
+        "newApps": 38853,
+        "totalProcessed": 26425,
+        "approved": 17903,
+        "rejected": 7638,
+        "other": 884
+      }
+    ]
+  },
+  "50320": {
+    "area": "50320",
+    "areaName": "名古屋",
+    "data": [
+      {
+        "year": "2006",
+        "totalReceived": 31523,
+        "carryOver": 7014,
+        "newApps": 24509,
+        "totalProcessed": 20211,
+        "approved": 18276,
+        "rejected": 1854,
+        "other": 81,
+        "pending": 11312
+      },
+      {
+        "year": "2007",
+        "totalReceived": 32699,
+        "carryOver": 11312,
+        "newApps": 21387,
+        "totalProcessed": 22390,
+        "approved": 19691,
+        "rejected": 2578,
+        "other": 121,
+        "pending": 10309
+      },
+      {
+        "year": "2008",
+        "totalReceived": 31639,
+        "carryOver": 10309,
+        "newApps": 21330,
+        "totalProcessed": 22316,
+        "approved": 19200,
+        "rejected": 2980,
+        "other": 136,
+        "pending": 9323
+      },
+      {
+        "year": "2009",
+        "totalReceived": 24815,
+        "carryOver": 9323,
+        "newApps": 15492,
+        "totalProcessed": 17022,
+        "approved": 13752,
+        "rejected": 2849,
+        "other": 421,
+        "pending": 7793
+      },
+      {
+        "year": "2010",
+        "totalReceived": 21232,
+        "carryOver": 7793,
+        "newApps": 13439,
+        "totalProcessed": 15696,
+        "approved": 11664,
+        "rejected": 3848,
+        "other": 184,
+        "pending": 5536
+      },
+      {
+        "year": "2011",
+        "totalReceived": 19313,
+        "carryOver": 5536,
+        "newApps": 13777,
+        "totalProcessed": 11798,
+        "approved": 8149,
+        "rejected": 3549,
+        "other": 100,
+        "pending": 7515
+      },
+      {
+        "year": "2012",
+        "totalReceived": 19932,
+        "carryOver": 7515,
+        "newApps": 12417,
+        "totalProcessed": 13717,
+        "approved": 9630,
+        "rejected": 3956,
+        "other": 131,
+        "pending": 6215
+      },
+      {
+        "year": "2013",
+        "totalReceived": 16288,
+        "carryOver": 6215,
+        "newApps": 10073,
+        "totalProcessed": 13115,
+        "approved": 9978,
+        "rejected": 2852,
+        "other": 285
+      },
+      {
+        "year": "2014",
+        "totalReceived": 15993,
+        "carryOver": 3173,
+        "newApps": 12820,
+        "totalProcessed": 10752,
+        "approved": 7364,
+        "rejected": 3145,
+        "other": 243
+      },
+      {
+        "year": "2015",
+        "totalReceived": 17469,
+        "carryOver": 5241,
+        "newApps": 12228,
+        "totalProcessed": 12236,
+        "approved": 9111,
+        "rejected": 2853,
+        "other": 272
+      },
+      {
+        "year": "2016",
+        "totalReceived": 17491,
+        "carryOver": 5233,
+        "newApps": 12258,
+        "totalProcessed": 11188,
+        "approved": 8799,
+        "rejected": 2125,
+        "other": 264
+      },
+      {
+        "year": "2017",
+        "totalReceived": 18709,
+        "carryOver": 6303,
+        "newApps": 12406,
+        "totalProcessed": 12573,
+        "approved": 6596,
+        "rejected": 5469,
+        "other": 508
+      },
+      {
+        "year": "2018",
+        "totalReceived": 18132,
+        "carryOver": 6136,
+        "newApps": 11996,
+        "totalProcessed": 12549,
+        "approved": 4725,
+        "rejected": 7156,
+        "other": 668
+      },
+      {
+        "year": "2019",
+        "totalReceived": 17064,
+        "carryOver": 5583,
+        "newApps": 11481,
+        "totalProcessed": 10039,
+        "approved": 4757,
+        "rejected": 4622,
+        "other": 660
+      },
+      {
+        "year": "2020",
+        "totalReceived": 17317,
+        "carryOver": 7025,
+        "newApps": 10292,
+        "totalProcessed": 13521,
+        "approved": 5569,
+        "rejected": 7222,
+        "other": 730
+      },
+      {
+        "year": "2021",
+        "totalReceived": 16538,
+        "carryOver": 3793,
+        "newApps": 12745,
+        "totalProcessed": 13265,
+        "approved": 6649,
+        "rejected": 5999,
+        "other": 617
+      },
+      {
+        "year": "2022",
+        "totalReceived": 16956,
+        "carryOver": 3273,
+        "newApps": 13683,
+        "totalProcessed": 12378,
+        "approved": 7007,
+        "rejected": 4862,
+        "other": 509
+      },
+      {
+        "year": "2023",
+        "totalReceived": 18745,
+        "carryOver": 4578,
+        "newApps": 14167,
+        "totalProcessed": 12919,
+        "approved": 7634,
+        "rejected": 4838,
+        "other": 447
+      },
+      {
+        "year": "2024",
+        "totalReceived": 20192,
+        "carryOver": 5826,
+        "newApps": 14366,
+        "totalProcessed": 16100,
+        "approved": 10239,
+        "rejected": 5418,
+        "other": 443
+      }
+    ]
+  },
+  "50430": {
+    "area": "50430",
+    "areaName": "大阪",
+    "data": [
+      {
+        "year": "2006",
+        "totalReceived": 9433,
+        "carryOver": 2572,
+        "newApps": 6861,
+        "totalProcessed": 6289,
+        "approved": 5201,
+        "rejected": 1049,
+        "other": 39,
+        "pending": 3144
+      },
+      {
+        "year": "2007",
+        "totalReceived": 10281,
+        "carryOver": 3144,
+        "newApps": 7137,
+        "totalProcessed": 6485,
+        "approved": 5019,
+        "rejected": 1259,
+        "other": 207,
+        "pending": 3796
+      },
+      {
+        "year": "2008",
+        "totalReceived": 11029,
+        "carryOver": 3796,
+        "newApps": 7233,
+        "totalProcessed": 7268,
+        "approved": 5866,
+        "rejected": 1353,
+        "other": 49,
+        "pending": 3761
+      },
+      {
+        "year": "2009",
+        "totalReceived": 10654,
+        "carryOver": 3761,
+        "newApps": 6893,
+        "totalProcessed": 6912,
+        "approved": 5584,
+        "rejected": 1275,
+        "other": 53,
+        "pending": 3742
+      },
+      {
+        "year": "2010",
+        "totalReceived": 10643,
+        "carryOver": 3742,
+        "newApps": 6901,
+        "totalProcessed": 7239,
+        "approved": 5609,
+        "rejected": 1566,
+        "other": 64,
+        "pending": 3404
+      },
+      {
+        "year": "2011",
+        "totalReceived": 10565,
+        "carryOver": 3404,
+        "newApps": 7161,
+        "totalProcessed": 7029,
+        "approved": 5167,
+        "rejected": 1796,
+        "other": 66,
+        "pending": 3536
+      },
+      {
+        "year": "2012",
+        "totalReceived": 10816,
+        "carryOver": 3536,
+        "newApps": 7280,
+        "totalProcessed": 6875,
+        "approved": 4751,
+        "rejected": 2042,
+        "other": 82,
+        "pending": 3941
+      },
+      {
+        "year": "2013",
+        "totalReceived": 9949,
+        "carryOver": 3941,
+        "newApps": 6008,
+        "totalProcessed": 7515,
+        "approved": 5107,
+        "rejected": 2194,
+        "other": 214
+      },
+      {
+        "year": "2014",
+        "totalReceived": 8860,
+        "carryOver": 2434,
+        "newApps": 6426,
+        "totalProcessed": 6765,
+        "approved": 4936,
+        "rejected": 1705,
+        "other": 124
+      },
+      {
+        "year": "2015",
+        "totalReceived": 8408,
+        "carryOver": 1907,
+        "newApps": 6501,
+        "totalProcessed": 6226,
+        "approved": 4607,
+        "rejected": 1463,
+        "other": 156
+      },
+      {
+        "year": "2016",
+        "totalReceived": 8562,
+        "carryOver": 2182,
+        "newApps": 6380,
+        "totalProcessed": 6127,
+        "approved": 3762,
+        "rejected": 2115,
+        "other": 250
+      },
+      {
+        "year": "2017",
+        "totalReceived": 9295,
+        "carryOver": 2435,
+        "newApps": 6860,
+        "totalProcessed": 6433,
+        "approved": 3595,
+        "rejected": 2510,
+        "other": 328
+      },
+      {
+        "year": "2018",
+        "totalReceived": 10172,
+        "carryOver": 2862,
+        "newApps": 7310,
+        "totalProcessed": 8264,
+        "approved": 5053,
+        "rejected": 2955,
+        "other": 256
+      },
+      {
+        "year": "2019",
+        "totalReceived": 9301,
+        "carryOver": 1908,
+        "newApps": 7393,
+        "totalProcessed": 6962,
+        "approved": 4980,
+        "rejected": 1774,
+        "other": 208
+      },
+      {
+        "year": "2020",
+        "totalReceived": 8832,
+        "carryOver": 2339,
+        "newApps": 6493,
+        "totalProcessed": 5817,
+        "approved": 4469,
+        "rejected": 1131,
+        "other": 217
+      },
+      {
+        "year": "2021",
+        "totalReceived": 10640,
+        "carryOver": 2979,
+        "newApps": 7661,
+        "totalProcessed": 7529,
+        "approved": 5087,
+        "rejected": 2223,
+        "other": 219
+      },
+      {
+        "year": "2022",
+        "totalReceived": 11015,
+        "carryOver": 3111,
+        "newApps": 7904,
+        "totalProcessed": 7901,
+        "approved": 5041,
+        "rejected": 2640,
+        "other": 220
+      },
+      {
+        "year": "2023",
+        "totalReceived": 11050,
+        "carryOver": 3113,
+        "newApps": 7937,
+        "totalProcessed": 6913,
+        "approved": 4437,
+        "rejected": 2245,
+        "other": 231
+      },
+      {
+        "year": "2024",
+        "totalReceived": 12673,
+        "carryOver": 4137,
+        "newApps": 8536,
+        "totalProcessed": 7468,
+        "approved": 4843,
+        "rejected": 2345,
+        "other": 280
+      }
+    ]
+  },
+  "50550": {
+    "area": "50550",
+    "areaName": "广岛",
+    "data": [
+      {
+        "year": "2006",
+        "totalReceived": 1936,
+        "carryOver": 293,
+        "newApps": 1643,
+        "totalProcessed": 1452,
+        "approved": 1395,
+        "rejected": 44,
+        "other": 13,
+        "pending": 484
+      },
+      {
+        "year": "2007",
+        "totalReceived": 2341,
+        "carryOver": 484,
+        "newApps": 1857,
+        "totalProcessed": 1594,
+        "approved": 1508,
+        "rejected": 67,
+        "other": 19,
+        "pending": 747
+      },
+      {
+        "year": "2008",
+        "totalReceived": 2588,
+        "carryOver": 747,
+        "newApps": 1841,
+        "totalProcessed": 2019,
+        "approved": 1869,
+        "rejected": 126,
+        "other": 24,
+        "pending": 569
+      },
+      {
+        "year": "2009",
+        "totalReceived": 2604,
+        "carryOver": 569,
+        "newApps": 2035,
+        "totalProcessed": 2106,
+        "approved": 1898,
+        "rejected": 183,
+        "other": 25,
+        "pending": 498
+      },
+      {
+        "year": "2010",
+        "totalReceived": 2324,
+        "carryOver": 498,
+        "newApps": 1826,
+        "totalProcessed": 1950,
+        "approved": 1754,
+        "rejected": 173,
+        "other": 23,
+        "pending": 374
+      },
+      {
+        "year": "2011",
+        "totalReceived": 2407,
+        "carryOver": 374,
+        "newApps": 2033,
+        "totalProcessed": 1864,
+        "approved": 1652,
+        "rejected": 198,
+        "other": 14,
+        "pending": 543
+      },
+      {
+        "year": "2012",
+        "totalReceived": 2548,
+        "carryOver": 543,
+        "newApps": 2005,
+        "totalProcessed": 2163,
+        "approved": 1850,
+        "rejected": 294,
+        "other": 19,
+        "pending": 385
+      },
+      {
+        "year": "2013",
+        "totalReceived": 1961,
+        "carryOver": 385,
+        "newApps": 1576,
+        "totalProcessed": 1520,
+        "approved": 1370,
+        "rejected": 116,
+        "other": 34
+      },
+      {
+        "year": "2014",
+        "totalReceived": 1841,
+        "carryOver": 441,
+        "newApps": 1400,
+        "totalProcessed": 1450,
+        "approved": 1263,
+        "rejected": 153,
+        "other": 34
+      },
+      {
+        "year": "2015",
+        "totalReceived": 1766,
+        "carryOver": 391,
+        "newApps": 1375,
+        "totalProcessed": 1408,
+        "approved": 1275,
+        "rejected": 84,
+        "other": 49
+      },
+      {
+        "year": "2016",
+        "totalReceived": 1643,
+        "carryOver": 358,
+        "newApps": 1285,
+        "totalProcessed": 1331,
+        "approved": 1181,
+        "rejected": 108,
+        "other": 42
+      },
+      {
+        "year": "2017",
+        "totalReceived": 1687,
+        "carryOver": 312,
+        "newApps": 1375,
+        "totalProcessed": 1290,
+        "approved": 1155,
+        "rejected": 93,
+        "other": 42
+      },
+      {
+        "year": "2018",
+        "totalReceived": 2106,
+        "carryOver": 397,
+        "newApps": 1709,
+        "totalProcessed": 1600,
+        "approved": 1449,
+        "rejected": 94,
+        "other": 57
+      },
+      {
+        "year": "2019",
+        "totalReceived": 2054,
+        "carryOver": 506,
+        "newApps": 1548,
+        "totalProcessed": 1757,
+        "approved": 1554,
+        "rejected": 149,
+        "other": 54
+      },
+      {
+        "year": "2020",
+        "totalReceived": 1864,
+        "carryOver": 297,
+        "newApps": 1567,
+        "totalProcessed": 1544,
+        "approved": 1183,
+        "rejected": 308,
+        "other": 53
+      },
+      {
+        "year": "2021",
+        "totalReceived": 1786,
+        "carryOver": 310,
+        "newApps": 1476,
+        "totalProcessed": 1539,
+        "approved": 860,
+        "rejected": 635,
+        "other": 44
+      },
+      {
+        "year": "2022",
+        "totalReceived": 1710,
+        "carryOver": 247,
+        "newApps": 1463,
+        "totalProcessed": 1259,
+        "approved": 680,
+        "rejected": 527,
+        "other": 52
+      },
+      {
+        "year": "2023",
+        "totalReceived": 2116,
+        "carryOver": 451,
+        "newApps": 1665,
+        "totalProcessed": 1623,
+        "approved": 989,
+        "rejected": 565,
+        "other": 69
+      },
+      {
+        "year": "2024",
+        "totalReceived": 2399,
+        "carryOver": 493,
+        "newApps": 1906,
+        "totalProcessed": 1926,
+        "approved": 1312,
+        "rejected": 556,
+        "other": 58
+      }
+    ]
+  },
+  "50640": {
+    "area": "50640",
+    "areaName": "高松",
+    "data": [
+      {
+        "year": "2006",
+        "totalReceived": 743,
+        "carryOver": 354,
+        "newApps": 389,
+        "totalProcessed": 472,
+        "approved": 423,
+        "rejected": 44,
+        "other": 5,
+        "pending": 271
+      },
+      {
+        "year": "2007",
+        "totalReceived": 767,
+        "carryOver": 271,
+        "newApps": 496,
+        "totalProcessed": 520,
+        "approved": 472,
+        "rejected": 36,
+        "other": 12,
+        "pending": 247
+      },
+      {
+        "year": "2008",
+        "totalReceived": 733,
+        "carryOver": 247,
+        "newApps": 486,
+        "totalProcessed": 488,
+        "approved": 432,
+        "rejected": 52,
+        "other": 4,
+        "pending": 245
+      },
+      {
+        "year": "2009",
+        "totalReceived": 761,
+        "carryOver": 245,
+        "newApps": 516,
+        "totalProcessed": 486,
+        "approved": 431,
+        "rejected": 46,
+        "other": 9,
+        "pending": 275
+      },
+      {
+        "year": "2010",
+        "totalReceived": 783,
+        "carryOver": 275,
+        "newApps": 508,
+        "totalProcessed": 616,
+        "approved": 556,
+        "rejected": 53,
+        "other": 7,
+        "pending": 167
+      },
+      {
+        "year": "2011",
+        "totalReceived": 731,
+        "carryOver": 167,
+        "newApps": 564,
+        "totalProcessed": 424,
+        "approved": 384,
+        "rejected": 34,
+        "other": 6,
+        "pending": 307
+      },
+      {
+        "year": "2012",
+        "totalReceived": 817,
+        "carryOver": 307,
+        "newApps": 510,
+        "totalProcessed": 598,
+        "approved": 510,
+        "rejected": 73,
+        "other": 15,
+        "pending": 219
+      },
+      {
+        "year": "2013",
+        "totalReceived": 575,
+        "carryOver": 219,
+        "newApps": 356,
+        "totalProcessed": 482,
+        "approved": 262,
+        "rejected": 184,
+        "other": 36
+      },
+      {
+        "year": "2014",
+        "totalReceived": 511,
+        "carryOver": 93,
+        "newApps": 418,
+        "totalProcessed": 424,
+        "approved": 294,
+        "rejected": 108,
+        "other": 22
+      },
+      {
+        "year": "2015",
+        "totalReceived": 576,
+        "carryOver": 87,
+        "newApps": 489,
+        "totalProcessed": 479,
+        "approved": 385,
+        "rejected": 70,
+        "other": 24
+      },
+      {
+        "year": "2016",
+        "totalReceived": 559,
+        "carryOver": 97,
+        "newApps": 462,
+        "totalProcessed": 406,
+        "approved": 347,
+        "rejected": 40,
+        "other": 19
+      },
+      {
+        "year": "2017",
+        "totalReceived": 626,
+        "carryOver": 153,
+        "newApps": 473,
+        "totalProcessed": 447,
+        "approved": 363,
+        "rejected": 77,
+        "other": 7
+      },
+      {
+        "year": "2018",
+        "totalReceived": 638,
+        "carryOver": 179,
+        "newApps": 459,
+        "totalProcessed": 452,
+        "approved": 378,
+        "rejected": 63,
+        "other": 11
+      },
+      {
+        "year": "2019",
+        "totalReceived": 630,
+        "carryOver": 186,
+        "newApps": 444,
+        "totalProcessed": 502,
+        "approved": 395,
+        "rejected": 90,
+        "other": 17
+      },
+      {
+        "year": "2020",
+        "totalReceived": 478,
+        "carryOver": 128,
+        "newApps": 350,
+        "totalProcessed": 398,
+        "approved": 240,
+        "rejected": 125,
+        "other": 33
+      },
+      {
+        "year": "2021",
+        "totalReceived": 499,
+        "carryOver": 80,
+        "newApps": 419,
+        "totalProcessed": 393,
+        "approved": 238,
+        "rejected": 127,
+        "other": 28
+      },
+      {
+        "year": "2022",
+        "totalReceived": 572,
+        "carryOver": 106,
+        "newApps": 466,
+        "totalProcessed": 381,
+        "approved": 264,
+        "rejected": 91,
+        "other": 26
+      },
+      {
+        "year": "2023",
+        "totalReceived": 709,
+        "carryOver": 191,
+        "newApps": 518,
+        "totalProcessed": 560,
+        "approved": 344,
+        "rejected": 191,
+        "other": 25
+      },
+      {
+        "year": "2024",
+        "totalReceived": 661,
+        "carryOver": 149,
+        "newApps": 512,
+        "totalProcessed": 572,
+        "approved": 379,
+        "rejected": 181,
+        "other": 12
+      }
+    ]
+  },
+  "50690": {
+    "area": "50690",
+    "areaName": "福冈",
+    "data": [
+      {
+        "year": "2006",
+        "totalReceived": 2501,
+        "carryOver": 575,
+        "newApps": 1926,
+        "totalProcessed": 1503,
+        "approved": 1396,
+        "rejected": 73,
+        "other": 34,
+        "pending": 998
+      },
+      {
+        "year": "2007",
+        "totalReceived": 2860,
+        "carryOver": 998,
+        "newApps": 1862,
+        "totalProcessed": 2033,
+        "approved": 1833,
+        "rejected": 134,
+        "other": 66,
+        "pending": 827
+      },
+      {
+        "year": "2008",
+        "totalReceived": 2522,
+        "carryOver": 827,
+        "newApps": 1695,
+        "totalProcessed": 1586,
+        "approved": 1410,
+        "rejected": 106,
+        "other": 70,
+        "pending": 936
+      },
+      {
+        "year": "2009",
+        "totalReceived": 2942,
+        "carryOver": 936,
+        "newApps": 2006,
+        "totalProcessed": 2198,
+        "approved": 1901,
+        "rejected": 227,
+        "other": 70,
+        "pending": 744
+      },
+      {
+        "year": "2010",
+        "totalReceived": 2850,
+        "carryOver": 744,
+        "newApps": 2106,
+        "totalProcessed": 2198,
+        "approved": 1901,
+        "rejected": 212,
+        "other": 85,
+        "pending": 652
+      },
+      {
+        "year": "2011",
+        "totalReceived": 2631,
+        "carryOver": 652,
+        "newApps": 1979,
+        "totalProcessed": 1611,
+        "approved": 1331,
+        "rejected": 136,
+        "other": 144,
+        "pending": 1020
+      },
+      {
+        "year": "2012",
+        "totalReceived": 2923,
+        "carryOver": 1020,
+        "newApps": 1903,
+        "totalProcessed": 2451,
+        "approved": 2036,
+        "rejected": 340,
+        "other": 75,
+        "pending": 472
+      },
+      {
+        "year": "2013",
+        "totalReceived": 2276,
+        "carryOver": 472,
+        "newApps": 1804,
+        "totalProcessed": 1767,
+        "approved": 1480,
+        "rejected": 264,
+        "other": 23
+      },
+      {
+        "year": "2014",
+        "totalReceived": 2156,
+        "carryOver": 509,
+        "newApps": 1647,
+        "totalProcessed": 1707,
+        "approved": 1420,
+        "rejected": 248,
+        "other": 39
+      },
+      {
+        "year": "2015",
+        "totalReceived": 2207,
+        "carryOver": 449,
+        "newApps": 1758,
+        "totalProcessed": 1739,
+        "approved": 1394,
+        "rejected": 299,
+        "other": 46
+      },
+      {
+        "year": "2016",
+        "totalReceived": 2192,
+        "carryOver": 467,
+        "newApps": 1725,
+        "totalProcessed": 1639,
+        "approved": 1426,
+        "rejected": 167,
+        "other": 46
+      },
+      {
+        "year": "2017",
+        "totalReceived": 2525,
+        "carryOver": 553,
+        "newApps": 1972,
+        "totalProcessed": 1762,
+        "approved": 1497,
+        "rejected": 204,
+        "other": 61
+      },
+      {
+        "year": "2018",
+        "totalReceived": 2887,
+        "carryOver": 763,
+        "newApps": 2124,
+        "totalProcessed": 2191,
+        "approved": 1620,
+        "rejected": 495,
+        "other": 76
+      },
+      {
+        "year": "2019",
+        "totalReceived": 2676,
+        "carryOver": 696,
+        "newApps": 1980,
+        "totalProcessed": 1952,
+        "approved": 1363,
+        "rejected": 521,
+        "other": 68
+      },
+      {
+        "year": "2020",
+        "totalReceived": 2688,
+        "carryOver": 724,
+        "newApps": 1964,
+        "totalProcessed": 1926,
+        "approved": 1187,
+        "rejected": 629,
+        "other": 110
+      },
+      {
+        "year": "2021",
+        "totalReceived": 2839,
+        "carryOver": 761,
+        "newApps": 2078,
+        "totalProcessed": 2134,
+        "approved": 1240,
+        "rejected": 808,
+        "other": 86
+      },
+      {
+        "year": "2022",
+        "totalReceived": 2783,
+        "carryOver": 705,
+        "newApps": 2078,
+        "totalProcessed": 2093,
+        "approved": 1218,
+        "rejected": 772,
+        "other": 103
+      },
+      {
+        "year": "2023",
+        "totalReceived": 3209,
+        "carryOver": 690,
+        "newApps": 2519,
+        "totalProcessed": 2574,
+        "approved": 1341,
+        "rejected": 1096,
+        "other": 137
+      },
+      {
+        "year": "2024",
+        "totalReceived": 3648,
+        "carryOver": 635,
+        "newApps": 3013,
+        "totalProcessed": 2265,
+        "approved": 1344,
+        "rejected": 791,
+        "other": 130
+      }
+    ]
+  }
+}

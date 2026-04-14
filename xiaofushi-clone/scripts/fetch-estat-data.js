@@ -91,20 +91,24 @@ function calcStats(yearData) {
   if (!yearData) return {};
   const approved = yearData.approved || 0;
   const rejected = yearData.rejected || 0;
-  const pending = yearData.pending || 0;
+  const totalReceived = yearData.totalReceived || 0;
   const totalProcessed = yearData.totalProcessed || 0;
+  const backlog = yearData.pending || (totalReceived - totalProcessed);
   const monthlyProcessed = totalProcessed / 12;
 
   return {
     newApps: yearData.newApps || 0,
     approved,
     rejected,
-    pending,
+    pending: backlog > 0 ? backlog : 0,
+    totalReceived,
+    totalProcessed,
+    carryOver: yearData.carryOver || 0,
     approvalRate: approved + rejected > 0
       ? Number(((approved / (approved + rejected)) * 100).toFixed(1))
       : 0,
-    estimatedDays: monthlyProcessed > 0
-      ? Math.round((pending / monthlyProcessed) * 30)
+    estimatedDays: monthlyProcessed > 0 && backlog > 0
+      ? Math.round((backlog / monthlyProcessed) * 30)
       : null,
   };
 }
