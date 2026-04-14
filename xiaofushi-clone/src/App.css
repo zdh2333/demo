@@ -1,0 +1,22 @@
+.app {
+  min-height: 100vh;
+}
+
+.app-body {
+  padding-top: var(--header-height);
+  transition: padding-right 0.3s;
+}
+
+.app-body.with-sidebar {
+  padding-right: var(--sidebar-width);
+}
+
+.main-content {
+  padding: 24px;
+}
+
+@media (max-width: 1024px) {
+  .app-body.with-sidebar {
+    padding-right: 0;
+  }
+}
