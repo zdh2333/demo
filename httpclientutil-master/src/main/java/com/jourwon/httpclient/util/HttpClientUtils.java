@@ -195,7 +195,7 @@ public class HttpClientUtils {
 	 * @throws Exception
 	 */
 	public static HttpClientResult doPut(String url) throws Exception {
-		return doPut(url);
+		return doPut(url, null);
 	}
 
 	/**
