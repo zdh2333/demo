@@ -1,24 +1,25 @@
-import { useState } from 'react';
+import { useI18n } from '../contexts/I18nContext';
+import { useTheme } from '../contexts/ThemeContext';
 import './Settings.css';
 
 export default function Settings() {
-  const [language, setLanguage] = useState('zh');
-  const [theme, setTheme] = useState('light');
+  const { lang, setLang, t } = useI18n();
+  const { theme, setTheme } = useTheme();
 
   return (
     <div className="settings">
-      <h1 className="settings-title">设置</h1>
+      <h1 className="settings-title">{t('settings.title')}</h1>
 
       <div className="settings-card">
         <div className="setting-item">
           <div className="setting-info">
-            <h3>语言 / Language</h3>
-            <p>选择界面显示语言</p>
+            <h3>{t('settings.language')}</h3>
+            <p>{t('settings.languageDesc')}</p>
           </div>
           <select
             className="setting-select"
-            value={language}
-            onChange={(e) => setLanguage(e.target.value)}
+            value={lang}
+            onChange={(e) => setLang(e.target.value)}
           >
             <option value="zh">中文</option>
             <option value="ja">日本語</option>
@@ -28,27 +29,27 @@ export default function Settings() {
 
         <div className="setting-item">
           <div className="setting-info">
-            <h3>主题 / Theme</h3>
-            <p>选择界面主题风格</p>
+            <h3>{t('settings.theme')}</h3>
+            <p>{t('settings.themeDesc')}</p>
           </div>
           <select
             className="setting-select"
             value={theme}
             onChange={(e) => setTheme(e.target.value)}
           >
-            <option value="light">浅色</option>
-            <option value="dark">深色</option>
-            <option value="auto">跟随系统</option>
+            <option value="light">{t('settings.light')}</option>
+            <option value="dark">{t('settings.dark')}</option>
+            <option value="auto">{t('settings.auto')}</option>
           </select>
         </div>
       </div>
 
       <div className="settings-card">
-        <h2 className="card-title">关于</h2>
+        <h2 className="card-title">{t('settings.about')}</h2>
         <div className="about-info">
-          <p><strong>Redo</strong> — 日本永住申请时间预估</p>
-          <p>数据来源：日本政府统计局（e-Stat）</p>
-          <p>版本：1.0.0</p>
+          <p><strong>Redo</strong> — {t('settings.aboutText')}</p>
+          <p>{t('settings.dataSource')}</p>
+          <p>{t('settings.version')}</p>
         </div>
       </div>
     </div>

@@ -1,13 +1,15 @@
 import { useState } from 'react';
+import { useI18n } from '../contexts/I18nContext';
 import { faqItems } from '../data/mockData';
 import './FAQ.css';
 
 export default function FAQ() {
+  const { t } = useI18n();
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
     <div className="faq-section">
-      <h2 className="section-title">常见问题</h2>
+      <h2 className="section-title">{t('faq.title')}</h2>
       <div className="faq-list">
         {faqItems.map((item, index) => (
           <div

@@ -233,8 +233,14 @@
   transition: background 0.2s;
 }
 
-.category-item:hover {
-  background: var(--bg);
+.category-item:hover,
+.category-item.active {
+  background: var(--primary-light);
+}
+
+.category-item.active .cat-name {
+  color: var(--primary-dark);
+  font-weight: 600;
 }
 
 .cat-dot {
@@ -255,6 +261,18 @@
   background: var(--bg);
   padding: 2px 8px;
   border-radius: 10px;
+}
+
+.topic-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.topic-empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 15px;
 }
 
 @media (max-width: 768px) {

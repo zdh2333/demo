@@ -1,0 +1,117 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  animation: fadeIn 0.2s;
+}
+
+.modal-content {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.25s;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.modal-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  margin-top: 14px;
+}
+
+.modal-select,
+.modal-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--white);
+}
+
+.modal-select:focus,
+.modal-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.modal-btn-primary {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  background: var(--primary);
+  color: white;
+  transition: background 0.2s;
+}
+
+.modal-btn-primary:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.modal-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.modal-result {
+  margin-top: 16px;
+  padding: 16px;
+  background: var(--primary-light);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal-result-date {
+  font-size: 15px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.modal-result-days {
+  font-size: 13px;
+  color: var(--primary-dark);
+}
+
+.modal-btn-close {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.modal-btn-close:hover {
+  background: var(--bg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

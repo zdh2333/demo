@@ -5,6 +5,8 @@ import {
 } from 'recharts';
 import StatsCard from '../components/StatsCard';
 import FAQ from '../components/FAQ';
+import DatePickerModal from '../components/DatePickerModal';
+import { useI18n } from '../contexts/I18nContext';
 import { regions } from '../data/mockData';
 import {
   fetchRegionSummary,
@@ -14,11 +16,13 @@ import {
 import './Home.css';
 
 export default function Home() {
+  const { t } = useI18n();
   const [selectedRegion, setSelectedRegion] = useState('tokyo');
   const [stats, setStats] = useState(null);
   const [trendData, setTrendData] = useState([]);
   const [comparisonData, setComparisonData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [showDatePicker, setShowDatePicker] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -39,21 +43,21 @@ export default function Home() {
   return (
     <div className="home">
       <section className="hero">
-        <h1 className="hero-title">日本永住申请时间预估</h1>
-        <p className="hero-desc">
-          基于出入国在留管理庁公开数据，为您预估永住申请审批时间
-        </p>
-        <button className="hero-cta">
+        <h1 className="hero-title">{t('hero.title')}</h1>
+        <p className="hero-desc">{t('hero.desc')}</p>
+        <button className="hero-cta" onClick={() => setShowDatePicker(true)}>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <line x1="12" y1="5" x2="12" y2="19" />
             <line x1="5" y1="12" x2="19" y2="12" />
           </svg>
-          添加我的日期，获取精确预估
+          {t('hero.cta')}
         </button>
       </section>
 
+      {showDatePicker && <DatePickerModal onClose={() => setShowDatePicker(false)} />}
+
       <section className="region-selector">
-        <h2 className="section-title">选择地区</h2>
+        <h2 className="section-title">{t('region.title')}</h2>
         <div className="region-buttons">
           {regions.map((r) => (
             <button
@@ -71,23 +75,23 @@ export default function Home() {
         <section className="stats-grid">
           <StatsCard
             icon="⏱"
-            label="预估审批天数"
+            label={t('stats.days')}
             value={stats.avgDays || '—'}
-            unit="天"
+            unit={t('stats.dayUnit')}
             color="#FF7043"
           />
           <StatsCard
             icon="✅"
-            label="许可率"
+            label={t('stats.rate')}
             value={stats.approvalRate || '—'}
-            unit="%"
+            unit={t('stats.rateUnit')}
             color="#00C853"
           />
           <StatsCard
             icon="📋"
-            label="待处理申请数"
+            label={t('stats.pending')}
             value={stats.pending ? stats.pending.toLocaleString() : '—'}
-            unit="件"
+            unit={t('stats.pendingUnit')}
             color="#00BCD4"
           />
         </section>
@@ -99,14 +103,14 @@ export default function Home() {
             <div className="chart-card-header">
               <div className="chart-card-header-left">
                 <h3 className="chart-card-title">
-                  {regions.find((r) => r.id === selectedRegion)?.nameJa || ''}累積データ
+                  {regions.find((r) => r.id === selectedRegion)?.nameJa || ''}{t('chart.cumulative')}
                 </h3>
                 <span className="chart-card-subtitle">
-                  {trendData[0]?.month}年から
+                  {trendData[0]?.month}{t('chart.from')}
                 </span>
               </div>
               <div className="chart-card-header-right">
-                <span className="chart-card-metric-label">前月総数</span>
+                <span className="chart-card-metric-label">{t('chart.prevTotal')}</span>
                 <span className="chart-card-metric-value">
                   {trendData[trendData.length - 1]?.pending?.toLocaleString() || '—'}
                 </span>
@@ -118,7 +122,7 @@ export default function Home() {
                 <XAxis dataKey="month" tick={{ fontSize: 11 }} interval={Math.max(0, Math.floor(trendData.length / 12) - 1)} />
                 <YAxis tick={{ fontSize: 12 }} />
                 <Tooltip contentStyle={{ borderRadius: 8, border: 'none', boxShadow: '0 2px 12px rgba(0,0,0,0.1)' }} />
-                <Bar dataKey="pending" name="待处理积压数" fill="#00C853" radius={[2, 2, 0, 0]} />
+                <Bar dataKey="pending" name={t('chart.pendingLabel')} fill="#00C853" radius={[2, 2, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -127,7 +131,7 @@ export default function Home() {
 
       {trendData.length > 0 && (
         <section className="chart-section">
-          <h2 className="section-title">每年新增申请数据</h2>
+          <h2 className="section-title">{t('chart.yearly')}</h2>
           <div className="chart-card">
             <ResponsiveContainer width="100%" height={320}>
               <BarChart data={trendData}>
@@ -136,9 +140,9 @@ export default function Home() {
                 <YAxis tick={{ fontSize: 12 }} />
                 <Tooltip contentStyle={{ borderRadius: 8, border: 'none', boxShadow: '0 2px 12px rgba(0,0,0,0.1)' }} />
                 <Legend />
-                <Bar dataKey="newApps" name="新增申请" fill="#00BCD4" radius={[4, 4, 0, 0]} />
-                <Bar dataKey="approved" name="许可" fill="#00C853" radius={[4, 4, 0, 0]} />
-                <Bar dataKey="rejected" name="不许可" fill="#FF7043" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="newApps" name={t('chart.newApps')} fill="#00BCD4" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="approved" name={t('chart.approved')} fill="#00C853" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="rejected" name={t('chart.rejected')} fill="#FF7043" radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -147,7 +151,7 @@ export default function Home() {
 
       {comparisonData.length > 0 && (
         <section className="chart-section">
-          <h2 className="section-title">各地区预估审批天数</h2>
+          <h2 className="section-title">{t('chart.regionCompare')}</h2>
           <div className="chart-card">
             <ResponsiveContainer width="100%" height={320}>
               <BarChart data={comparisonData} layout="vertical">
@@ -155,7 +159,7 @@ export default function Home() {
                 <XAxis type="number" tick={{ fontSize: 12 }} />
                 <YAxis dataKey="region" type="category" tick={{ fontSize: 12 }} width={60} />
                 <Tooltip contentStyle={{ borderRadius: 8, border: 'none', boxShadow: '0 2px 12px rgba(0,0,0,0.1)' }} />
-                <Bar dataKey="days" name="预估天数" fill="#00C853" radius={[0, 4, 4, 0]} />
+                <Bar dataKey="days" name={t('chart.estDays')} fill="#00C853" radius={[0, 4, 4, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -165,10 +169,8 @@ export default function Home() {
       <FAQ />
 
       <section className="source-section">
-        <h2 className="section-title">数据来源</h2>
-        <p className="source-desc">
-          本站数据来源于出入国在留管理庁公开的「出入国管理統計」，可与官方数据进行比对。
-        </p>
+        <h2 className="section-title">{t('source.title')}</h2>
+        <p className="source-desc">{t('source.desc')}</p>
         <a
           href="https://www.e-stat.go.jp/dbview?sid=0003449073"
           target="_blank"
