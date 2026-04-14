@@ -46,7 +46,7 @@ export default function Settings() {
       <div className="settings-card">
         <h2 className="card-title">关于</h2>
         <div className="about-info">
-          <p><strong>XiaoFushi.com</strong> — 日本永住申请时间预估</p>
+          <p><strong>Redo</strong> — 日本永住申请时间预估</p>
           <p>数据来源：日本政府统计局（e-Stat）</p>
           <p>版本：1.0.0</p>
         </div>

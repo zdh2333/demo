@@ -14,7 +14,7 @@ export default function Header({ onToggleSidebar }) {
           </button>
           <NavLink to="/" className="logo">
             <span className="logo-icon">🏠</span>
-            <span className="logo-text">XiaoFushi.com</span>
+            <span className="logo-text">Redo</span>
           </NavLink>
         </div>
 
