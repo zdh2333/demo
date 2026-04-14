@@ -1,24 +1,71 @@
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useI18n } from '../contexts/I18nContext';
-import { forumTopics } from '../data/mockData';
+import { useAuth } from '../contexts/AuthContext';
+import AuthModal from '../components/AuthModal';
+import { fetchTopic, fetchReplies, createReply } from '../services/forumApi';
 import './TopicDetail.css';
 
-const mockReplies = [
-  { id: 1, author: 'helper_01', avatar: 'H', color: '#2196F3', time: '1天前', content: '感谢分享！我也在同一个入管局申请，目前还在等待中。请问您的申请材料准备了多久？' },
-  { id: 2, author: 'visa_pro', avatar: 'V', color: '#4CAF50', time: '20小时前', content: '根据我的经验，名古屋最近审批速度有加快的趋势。建议大家关注最新数据。' },
-  { id: 3, author: 'tokyo_user', avatar: 'T', color: '#FF9800', time: '12小时前', content: '有没有人知道补充材料后会不会影响审批时间？我上周刚提交了追加材料。' },
-];
+function timeAgo(dateStr) {
+  const diff = Date.now() - new Date(dateStr).getTime();
+  const mins = Math.floor(diff / 60000);
+  if (mins < 60) return `${mins}分钟前`;
+  const hours = Math.floor(mins / 60);
+  if (hours < 24) return `${hours}小时前`;
+  const days = Math.floor(hours / 24);
+  return `${days}天前`;
+}
 
 export default function TopicDetail() {
   const { id } = useParams();
   const { t } = useI18n();
-  const topic = forumTopics.find((tp) => tp.id === Number(id));
+  const { user } = useAuth();
+  const [topic, setTopic] = useState(null);
+  const [replies, setReplies] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [replyText, setReplyText] = useState('');
+  const [posting, setPosting] = useState(false);
+  const [authMode, setAuthMode] = useState(null);
+
+  useEffect(() => {
+    setLoading(true);
+    Promise.all([fetchTopic(id), fetchReplies(id)]).then(([t, r]) => {
+      setTopic(t);
+      setReplies(r);
+      setLoading(false);
+    });
+  }, [id]);
+
+  const handleReply = async () => {
+    if (!replyText.trim() || !user) return;
+    setPosting(true);
+    const { error } = await createReply({
+      topicId: Number(id),
+      content: replyText.trim(),
+      authorId: user.id,
+    });
+    setPosting(false);
+    if (!error) {
+      setReplyText('');
+      const updated = await fetchReplies(id);
+      setReplies(updated);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="topic-detail">
+        <Link to="/bbs" className="topic-back">{t('topicDetail.back')}</Link>
+        <p>加载中...</p>
+      </div>
+    );
+  }
 
   if (!topic) {
     return (
       <div className="topic-detail">
         <Link to="/bbs" className="topic-back">{t('topicDetail.back')}</Link>
-        <p>Topic not found.</p>
+        <p>帖子不存在</p>
       </div>
     );
   }
@@ -29,35 +76,38 @@ export default function TopicDetail() {
 
       <article className="topic-article">
         <div className="topic-article-header">
-          <div className="topic-detail-avatar" style={{ background: topic.avatarColor }}>
-            {topic.avatar}
+          <div className="topic-detail-avatar" style={{ background: topic.avatar_color || '#999' }}>
+            {topic.avatar_letter || 'U'}
           </div>
           <div>
             <h1 className="topic-detail-title">{topic.title}</h1>
             <div className="topic-detail-meta">
-              <span>{topic.author}</span>
-              <span>{topic.lastReply}</span>
-              <span>{topic.replies} {t('topicDetail.replyCount')}</span>
-              <span>{topic.views} {t('topicDetail.views')}</span>
+              <span>{topic.author_name}</span>
+              <span>{timeAgo(topic.created_at)}</span>
+              <span>{topic.reply_count ?? replies.length} {t('topicDetail.replyCount')}</span>
+              <span>{topic.views ?? 0} {t('topicDetail.views')}</span>
             </div>
           </div>
         </div>
         <div className="topic-body">
-          <p>这是一篇关于「{topic.title}」的详细讨论帖。欢迎大家分享自己的经验和看法。</p>
-          <p>申请永住是在日本长期居住的重要一步，希望大家互相帮助，分享有用的信息。</p>
+          {(topic.body || '').split('\n').map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
         </div>
         <span className="topic-detail-category">{topic.category}</span>
       </article>
 
       <section className="replies-section">
-        <h3 className="replies-title">{topic.replies} {t('topicDetail.replyCount')}</h3>
-        {mockReplies.map((reply) => (
+        <h3 className="replies-title">{replies.length} {t('topicDetail.replyCount')}</h3>
+        {replies.map((reply) => (
           <div key={reply.id} className="reply-item">
-            <div className="reply-avatar" style={{ background: reply.color }}>{reply.avatar}</div>
+            <div className="reply-avatar" style={{ background: reply.avatar_color || '#999' }}>
+              {reply.avatar_letter || 'U'}
+            </div>
             <div className="reply-body">
               <div className="reply-header">
-                <span className="reply-author">{reply.author}</span>
-                <span className="reply-time">{reply.time}</span>
+                <span className="reply-author">{reply.author_name}</span>
+                <span className="reply-time">{timeAgo(reply.created_at)}</span>
               </div>
               <p className="reply-content">{reply.content}</p>
             </div>
@@ -66,9 +116,31 @@ export default function TopicDetail() {
       </section>
 
       <div className="reply-form">
-        <textarea className="reply-textarea" placeholder={t('topicDetail.replyPlaceholder')} rows={3} />
-        <button className="reply-submit">{t('topicDetail.replyBtn')}</button>
+        {user ? (
+          <>
+            <textarea
+              className="reply-textarea"
+              placeholder={t('topicDetail.replyPlaceholder')}
+              rows={3}
+              value={replyText}
+              onChange={(e) => setReplyText(e.target.value)}
+            />
+            <button
+              className="reply-submit"
+              onClick={handleReply}
+              disabled={posting || !replyText.trim()}
+            >
+              {posting ? '...' : t('topicDetail.replyBtn')}
+            </button>
+          </>
+        ) : (
+          <button className="reply-login-btn" onClick={() => setAuthMode('login')}>
+            {t('topicDetail.loginToReply')}
+          </button>
+        )}
       </div>
+
+      {authMode && <AuthModal mode={authMode} onClose={() => setAuthMode(null)} />}
     </div>
   );
 }

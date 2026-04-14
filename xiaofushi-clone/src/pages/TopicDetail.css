@@ -179,3 +179,24 @@
 .reply-submit:hover {
   background: var(--primary-dark);
 }
+
+.reply-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.reply-login-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.reply-login-btn:hover {
+  background: var(--primary);
+  color: white;
+}

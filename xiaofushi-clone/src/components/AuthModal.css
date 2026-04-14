@@ -40,6 +40,21 @@
   border-color: var(--primary);
 }
 
+.auth-error {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: #FFF0F0;
+  border: 1px solid #FFD0D0;
+  border-radius: 6px;
+  color: #D32F2F;
+  font-size: 13px;
+}
+
+[data-theme="dark"] .auth-error {
+  background: #3E1E1E;
+  border-color: #5E2E2E;
+}
+
 .auth-submit {
   width: 100%;
   margin-top: 20px;

@@ -263,6 +263,119 @@
   border-radius: 10px;
 }
 
+.bbs-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-new-topic {
+  padding: 8px 18px;
+  background: var(--primary);
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-new-topic:hover {
+  background: var(--primary-dark);
+}
+
+.new-topic-form {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+}
+
+.new-topic-title {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--bg);
+  margin-bottom: 10px;
+}
+
+.new-topic-body {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.new-topic-title:focus,
+.new-topic-body:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.new-topic-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.new-topic-category {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--text);
+  background: var(--white);
+}
+
+.btn-post {
+  padding: 8px 20px;
+  background: var(--primary);
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-post:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.bbs-user-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bbs-user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.bbs-user-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
 .topic-item {
   text-decoration: none;
   color: inherit;

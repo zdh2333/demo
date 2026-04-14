@@ -1,11 +1,15 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useI18n } from '../contexts/I18nContext';
+import { useAuth } from '../contexts/AuthContext';
+import AuthModal from './AuthModal';
 import './Header.css';
 
 export default function Header({ onToggleSidebar }) {
   const { t } = useI18n();
+  const { user, profile, signOut } = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [authMode, setAuthMode] = useState(null);
 
   return (
     <header className="header">
@@ -43,14 +47,30 @@ export default function Header({ onToggleSidebar }) {
           </NavLink>
         </nav>
 
-        <button className="mobile-menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <line x1="3" y1="12" x2="21" y2="12" />
-            <line x1="3" y1="6" x2="21" y2="6" />
-            <line x1="3" y1="18" x2="21" y2="18" />
-          </svg>
-        </button>
+        <div className="header-right">
+          {user ? (
+            <div className="header-user">
+              <span className="header-avatar" style={{ background: profile?.avatar_color || '#00C853' }}>
+                {profile?.avatar_letter || 'U'}
+              </span>
+              <button className="header-logout" onClick={signOut}>退出</button>
+            </div>
+          ) : (
+            <button className="header-login-btn" onClick={() => setAuthMode('login')}>
+              {t('bbs.login')}
+            </button>
+          )}
+          <button className="mobile-menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+        </div>
       </div>
+
+      {authMode && <AuthModal mode={authMode} onClose={() => setAuthMode(null)} />}
     </header>
   );
 }
